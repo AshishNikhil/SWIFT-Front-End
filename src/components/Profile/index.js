@@ -71,54 +71,57 @@ class Profile extends Component {
 
     return (
       <div>
-        {/* Top Navbar */}
-        <div>
+        <div className="navbar">
           <div>
-            <span>S</span>WIFT
+            <img src="/Swiftlogo.png" alt="Logo" className="logo" />
           </div>
-          <div>
-            <div>{initials}</div>
-            <div>{user.name}</div>
+          <div className="profile-info">
+            <div className="initials-bg">{initials}</div>
+            <div className="nav-name">{name}</div>
           </div>
         </div>
 
-        {/* Content */}
-        <div>
-          <button onClick={this.handleBack}>← Back to Dashboard</button>
+        <div className="profile-container">
+          <div className="profile-header">
+            <button onClick={this.handleBack} className="back-bnt">
+              ←
+            </button>
+            <h1 className="profile-name">Welcome, {name}</h1>
+          </div>
 
-          <h1>Welcome, {name}</h1>
-
-          <div>
+          <div className="profile-content">
             {/* Left Column */}
-            <div>
-              <div>{initials}</div>
-              <h2>{name}</h2>
-              <p>{email}</p>
+            <div className="profile-left-column">
+              <div className="profile-logo">{initials}</div>
+              <div className="profile-details">
+                <h2>{name}</h2>
+                <p>{email}</p>
+              </div>
             </div>
 
             {/* Right Column */}
-            <div>
+            <div className="profile-right-column">
               <div>
-                <label>User ID</label>
-                <div>{id}</div>
+                <label className="common-label">User ID</label>
+                <div className="common-info">{id}</div>
               </div>
               <div>
-                <label>Name</label>
-                <div>{name}</div>
+                <label className="common-label">Name</label>
+                <div className="common-info">{name}</div>
               </div>
               <div>
-                <label>Email ID</label>
-                <div>{email}</div>
+                <label className="common-label">Email ID</label>
+                <div className="common-info">{email}</div>
               </div>
               <div>
-                <label>Address</label>
-                <div>
+                <label className="common-label">Address</label>
+                <div className="common-info">
                   {street}, {city}
                 </div>
               </div>
               <div>
-                <label>Phone</label>
-                <div>{phoneNo}</div>
+                <label className="common-label">Phone</label>
+                <div className="common-info">{phoneNo}</div>
               </div>
             </div>
           </div>
