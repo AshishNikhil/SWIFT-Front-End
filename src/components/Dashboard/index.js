@@ -1,10 +1,16 @@
 import { Component } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import Navbar from "../Navbar";
 import "./index.css";
 
 class Dashboard extends Component {
   constructor(props) {
     super(props);
+    const params = new URLSearchParams(window.location.search);
+    const userParam = params.get("user");
+    const navUser = userParam
+      ? decodeURIComponent(userParam).replace(/(^"|"$)/g, "")
+      : null;
     this.state = {
       comments: [],
       user: null,
@@ -13,6 +19,7 @@ class Dashboard extends Component {
       searchQuery: "",
       page: 1,
       pageSize: 10,
+      navUser,
     };
   }
 
@@ -100,28 +107,13 @@ class Dashboard extends Component {
       return <div className="loading">{this.renderLoadingView()}</div>;
     }
 
-    const { name } = user;
-    const initials = name
-      .split(" ")
-      .map((n) => n[0])
-      .join("")
-      .toUpperCase();
-
     const data = this.getSortedAndFilteredData();
     const pageCount = Math.ceil(data.length / pageSize);
     const paginatedData = data.slice((page - 1) * pageSize, page * pageSize);
 
     return (
       <>
-        <div className="navbar">
-          <div>
-            <img src="/Swiftlogo.png" alt="Logo" className="logo" />
-          </div>
-          <div className="profile-info" onClick={this.handleBack}>
-            <div className="initials-bg">{initials}</div>
-            <div className="nav-name">{name}</div>
-          </div>
-        </div>
+        <Navbar user={{ name: this.state.navUser || "Guest" }} />
         <div className="dashboard-container">
           <div className="dashboard-header">
             <div>

@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { ThreeDots } from "react-loader-spinner";
+import Navbar from "../Navbar";
 import "./index.css";
 
 const apiStatusConstants = {
@@ -47,7 +48,10 @@ class Profile extends Component {
   };
 
   handleBack = () => {
-    window.location.href = "/Dashboard";
+    const { user } = this.state;
+    const { name } = user;
+    const navUser = encodeURIComponent(JSON.stringify(name));
+    window.location.href = `/Dashboard?user=${navUser}`;
   };
 
   renderLoadingView = () => (
@@ -58,7 +62,7 @@ class Profile extends Component {
 
   render() {
     const { user } = this.state;
-    if (!user) return <div>{this.renderLoadingView}</div>;
+    if (!user) return <div>{this.renderLoadingView()}</div>;
     const { id, name, email, address, phone } = user;
     const { street, city } = address;
     const initials = name
@@ -71,16 +75,7 @@ class Profile extends Component {
 
     return (
       <div>
-        <div className="navbar">
-          <div>
-            <img src="/Swiftlogo.png" alt="Logo" className="logo" />
-          </div>
-          <div className="profile-info">
-            <div className="initials-bg">{initials}</div>
-            <div className="nav-name">{name}</div>
-          </div>
-        </div>
-
+        <Navbar user={user} />
         <div className="profile-container">
           <div className="profile-header">
             <button onClick={this.handleBack} className="back-bnt">

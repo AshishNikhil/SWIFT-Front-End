@@ -1,42 +1,3 @@
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #272a4b;
-  height: 70px;
-}
-
-.logo {
-  width: 55px;
-  height: 20px;
-  margin-left: 65px;
-}
-
-.profile-info {
-  display: flex;
-  align-items: center;
-  margin-right: 65px;
-}
-
-.initials-bg {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #f9faf7;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 3px;
-  align-items: center;
-  color: #272a4b;
-  font-size: 20px;
-  margin-right: 8px;
-}
-
-.nav-name {
-  color: white;
-}
-
 .dashboard-container {
   padding: 62px;
 }
@@ -102,6 +63,7 @@
   border: solid 1px #e2e8f0;
   border-radius: 12px;
   overflow: hidden;
+  min-width: 100%;
 }
 
 .table-header {
