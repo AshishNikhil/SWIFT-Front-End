@@ -2,7 +2,7 @@ import { Component } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Profile from "./components/Profile";
-
+import Dashboard from "./components/Dashboard";
 import "./App.css";
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
     return (
       <Routes>
         <Route path="/" element={<Profile />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
       </Routes>
     );
   }

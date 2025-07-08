@@ -1,0 +1,135 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #272a4b;
+  height: 70px;
+}
+
+.logo {
+  width: 55px;
+  height: 20px;
+  margin-left: 65px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-right: 65px;
+}
+
+.initials-bg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f9faf7;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3px;
+  align-items: center;
+  color: #272a4b;
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.nav-name {
+  color: white;
+}
+
+.dashboard-container {
+  padding: 62px;
+}
+
+.dashboard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sort-select {
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 10px;
+  margin-right: 12px;
+  padding: 4px;
+  border: solid 1px #ccc;
+  color: #272a4b;
+}
+
+.search-input {
+  width: 300px;
+  height: 30px;
+  border: solid 1px #ccc;
+  color: #272a4b;
+  font-size: 12px;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.pagination-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.pagination-info {
+  font-size: 12px;
+  color: #272a4b;
+  margin-right: 12px;
+}
+
+.pagination-button {
+  border: none;
+  color: #272a4b;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.page-size-select {
+  margin-left: 10px;
+  border-radius: 6px;
+  padding: 4px;
+  border: solid 1px #ccc;
+  color: #272a4b;
+}
+
+.comments-table {
+  margin-top: 10px;
+  border: solid 1px #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header {
+  background-color: #f9f9f9;
+  color: #272a4b;
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 14px 20px;
+  text-align: left;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  border-left: none;
+  border-right: none;
+}
+td {
+  font-size: 14px;
+  color: #272a4b;
+}
+th {
+  background-color: #e8ebf0;
+  color: #272a4b;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}

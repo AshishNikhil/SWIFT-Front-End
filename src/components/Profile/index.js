@@ -47,7 +47,7 @@ class Profile extends Component {
   };
 
   handleBack = () => {
-    window.location.href = "/";
+    window.location.href = "/Dashboard";
   };
 
   renderLoadingView = () => (
@@ -90,7 +90,6 @@ class Profile extends Component {
           </div>
 
           <div className="profile-content">
-            {/* Left Column */}
             <div className="profile-left-column">
               <div className="profile-logo">{initials}</div>
               <div className="profile-details">
@@ -98,8 +97,6 @@ class Profile extends Component {
                 <p>{email}</p>
               </div>
             </div>
-
-            {/* Right Column */}
             <div className="profile-right-column">
               <div>
                 <label className="common-label">User ID</label>
