@@ -8,7 +8,6 @@ class Navbar extends Component {
 
   render() {
     const { user } = this.props;
-
     const { name } = user;
     const initials = name
       .split(" ")

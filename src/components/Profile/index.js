@@ -62,7 +62,7 @@ class Profile extends Component {
 
   render() {
     const { user } = this.state;
-    if (!user) return <div>{this.renderLoadingView()}</div>;
+    if (!user) return <div className="loading">{this.renderLoadingView()}</div>;
     const { id, name, email, address, phone } = user;
     const { street, city } = address;
     const initials = name
