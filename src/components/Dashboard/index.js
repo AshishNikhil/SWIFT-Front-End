@@ -97,7 +97,7 @@ class Dashboard extends Component {
     const { user, searchQuery, page, pageSize, sortField, sortOrder } =
       this.state;
     if (!user) {
-      return <div>{this.renderLoadingView()}</div>;
+      return <div className="loading">{this.renderLoadingView()}</div>;
     }
 
     const { name } = user;

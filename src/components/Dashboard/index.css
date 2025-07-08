@@ -133,3 +133,12 @@ th {
 tbody tr:nth-child(even) {
   background-color: #f9fafb;
 }
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 24px;
+  color: #272a4b;
+}
