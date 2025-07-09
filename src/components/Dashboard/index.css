@@ -106,9 +106,6 @@ tbody tr:nth-child(even) {
 }
 
 @media (max-width: 768px) {
-  .dashboard-container {
-    padding: 12px;
-  }
   .dashboard-header {
     display: flex;
     flex-direction: column-reverse;
@@ -119,11 +116,5 @@ tbody tr:nth-child(even) {
   }
   .search-input {
     margin-bottom: 12px;
-  }
-}
-
-@media (min-width: 768px) {
-  .dashboard-container {
-    padding: 6px;
   }
 }
